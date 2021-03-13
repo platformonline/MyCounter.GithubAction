@@ -1,5 +1,7 @@
 name: 'MyCounter Github Action'
 description: 'Counter provided by MyCounter (https://www.mycounter.app)'
+icon: check
+color: blue
 inputs:
   action:
     description: 'Action Type - Hit || Get'
