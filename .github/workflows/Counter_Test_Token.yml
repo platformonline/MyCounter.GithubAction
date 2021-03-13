@@ -1,4 +1,4 @@
-name: Counter_Test
+name: Counter_Test_Token
 
 on:
   push:
