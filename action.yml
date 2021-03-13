@@ -1,0 +1,25 @@
+name: 'MyCounter Github Action'
+description: 'Counter provided by MyCounter (https://www.mycounter.app)'
+inputs:
+  action:
+    description: 'Action Type - Hit || Get'
+    required: false
+    default: 'Hit'
+  namespace:
+    description: 'Namespace Name'
+    required: true
+    default: 'NameSpace'
+  key:
+    description: 'Key'
+    required: true
+    default: 'Key'
+  token:
+    description: 'Security Token'
+    required: false
+    default: ''
+outputs:
+  value:
+    description: 'Counter Value'
+runs:
+  using: 'node12'
+  main: 'index.js'
