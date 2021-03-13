@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
     - name: MyCounter Github Action
@@ -21,5 +21,5 @@ jobs:
         action: 'Hit'
         namespace: 'NameSpace'
         key: 'Key'
-    - name: Get color
+    - name: Get value
       run: echo "Value = ${{ steps.counter.outputs.value }}"
