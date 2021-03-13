@@ -16,7 +16,10 @@ jobs:
     steps:
     - name: MyCounter Github Action
       uses: platformonline/MyCounter.GithubAction@v1.0
+      id: counter
       with:
         action: 'Hit'
         namespace: 'NameSpace'
         key: 'Key'
+    - name: Get color
+      run: echo "Value = ${{ steps.counter.outputs.value }}"
