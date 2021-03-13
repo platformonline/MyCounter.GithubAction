@@ -28,10 +28,14 @@ Counter Value
 
 ## Example usage
 ```yaml
-uses: platformonline/MyCounter.GithubAction@v1.0
-with:
-  action: 'Hit'
-  namespace: 'NameSpace'
-  key: 'Key'
-  token: '${{ secrets.TOKEN }}'
+- name: MyCounter Github Action
+  uses: platformonline/MyCounter.GithubAction@v1.0
+  id: counter
+  with:
+    action: 'Hit'
+    namespace: 'NameSpace'
+    key: 'Key'
+    token: '${{ secrets.TOKEN }}'
+- name: Get Value
+  run: echo "Value = ${{ steps.counter.outputs.value }}"
 ```
