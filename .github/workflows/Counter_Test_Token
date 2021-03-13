@@ -1,0 +1,26 @@
+name: Counter_Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+    - name: MyCounter Github Action
+      uses: platformonline/MyCounter.GithubAction@v1.0
+      id: counter
+      with:
+        action: 'Hit'
+        namespace: 'MyCounter.GithubAction'
+        key: 'Key'
+        token: '${{ secrets.TOKEN }}'
+    - name: Get Value
+      run: echo "Value = ${{ steps.counter.outputs.value }}"
