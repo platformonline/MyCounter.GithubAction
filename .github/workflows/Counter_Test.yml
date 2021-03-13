@@ -1,0 +1,22 @@
+name: Counter_Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: MyCounter Github Action
+      uses: platformonline/MyCounter.GithubAction@v1.0
+      with:
+        action: 'Hit'
+        namespace: 'NameSpace'
+        key: 'Key'
