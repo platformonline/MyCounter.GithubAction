@@ -1,6 +1,6 @@
 # MyCounter Github Action
 
-This action is developed to Hit or Get Counter value on MyCounter.
+This action is developed to Hit or Get Counter value on https://www.mycounter.app
 
 ## Inputs
 
