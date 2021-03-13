@@ -28,7 +28,10 @@ Counter Value
 
 ## Example usage
 ```yaml
-uses: actions/hello-world-javascript-action@main
+uses: platformonline/MyCounter.GithubAction@v1.0
 with:
-  who-to-greet: 'Mona the Octocat'
+  action: 'Hit'
+  namespace: 'NameSpace'
+  key: 'Key'
+  token: '${{ secrets.TOKEN }}'
 ```
