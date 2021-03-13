@@ -27,7 +27,8 @@ Token to be used for security. Default `null`
 Counter Value
 
 ## Example usage
-
-uses: actions/hello-world-javascript-action@v1.1
+```yaml
+uses: actions/hello-world-javascript-action@main
 with:
   who-to-greet: 'Mona the Octocat'
+```
